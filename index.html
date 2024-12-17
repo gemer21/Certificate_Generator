@@ -9,13 +9,14 @@
 </head>
 <body>
     <div class="container">
+    	<img src="header.png" alt="Header Image">
         <h2>Certificate Generator</h2>
         <form id="certificateForm">
             <input type="text" id="userName" placeholder="Masukkan nama Anda" required>
             <select id="certificateType">
             	<option value="" disabled selected>Pilih jenis sertifikat</option>
-                <option value="SERTIFIKAT1.pdf">Certificate Keguruan</option>
-                <option value="SERTIFIKAT2.pdf">Certificate Kesiswaan</option>
+                <option value="SERTIFIKAT1.pdf">Sertifikat Keguruan</option>
+                <option value="SERTIFIKAT2.pdf">Sertifikat Kesiswaan</option>
             </select>
             <button type="button" id="generateBtn">Generate Certificate</button>
         </form>
@@ -28,6 +29,9 @@
         <br>
         <button id="downloadBtn" style="display: none;">Download Certificate</button>
     </div>
+    <footer class="text-center py-3">
+        <p>&copy; 2024 IDEV. All Rights Reserved.</p>
+    </footer>
     <div class="toast-container" id="toast-container"></div>
     <script src="https://cdn.jsdelivr.net/npm/pdf-lib"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
