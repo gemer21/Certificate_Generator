@@ -29,12 +29,21 @@ document.getElementById('generateBtn').addEventListener('click', async function 
     const userNameWidth = font.widthOfTextAtSize(userName, fontSize);
     const userNameX = (pageWidth - userNameWidth) / 2;
 
-    page.drawText(userName, {
-        x: userNameX,
-        y: 330,
-        font,
-        size: fontSize,
-    });
+    if (certificateType === "SERTIFIKAT1.pdf") {
+        page.drawText(userName, {
+            x: userNameX,
+            y: 330,
+            font,
+            size: fontSize,
+        });
+    } else {
+    	page.drawText(userName, {
+            x: userNameX,
+            y: 310,
+            font,
+            size: fontSize,
+        });
+    }
 
     const pdfBytes = await pdfDoc.save();
     displayPDFPreview(pdfBytes);
