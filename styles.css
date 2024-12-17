@@ -13,11 +13,11 @@ body {
     background-color: white;
     padding: 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 60%;
+    width: 90%;
 }
 
 input {
-    margin: 10px;
+    margin: 5px;
     padding: 8px;
     font-size: 16px;
     width: 70%;
@@ -30,6 +30,8 @@ button {
     border: none;
     cursor: pointer;
     font-size: 16px;
+    margin-top: 20px;
+    border-radius: 10px;
 }
 
 button:hover {
@@ -40,15 +42,47 @@ button:hover {
     margin-top: 20px;
 }
 
-iframe {
+canvas {
+    border: 2px solid #ccc;
+}
+
+#certificateType {
+    margin: 5px;
+    padding: 8px;
+    font-size: 16px;
+    width: 70%;
     border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='5'%3E%3Cpath fill='%23000' d='M0 0l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+}
+
+#certificateType:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, #certificateType {
+    box-sizing: border-box;
 }
 
 .lds-ellipsis {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
+    width: 65px;
     height: 50px;
     margin: 20px auto;
     position: relative;
@@ -102,5 +136,28 @@ iframe {
     }
     100% {
         transform: translate(24px, 0);
+    }
+}
+
+.toast-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+.toast {
+    display: none;
+    animation: slideUp 0.3s ease-in-out forwards;
+    margin-bottom: 10px;
+}
+@keyframes slideUp {
+    0% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 100px;
+        opacity: 1;
     }
 }
