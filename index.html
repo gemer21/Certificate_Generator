@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Certificate Generator</h2>
+        <form id="certificateForm">
+            <input type="text" id="userName" placeholder="Enter Your Name" required>
+            <!--<input type="text" id="schoolName" placeholder="Enter School Name" required>-->
+            <button type="button" id="generateBtn">Generate Certificate</button>
+        </form>
+        <br>
+        <div id="loadingDots" class="lds-ellipsis" style="display:none;">
+            <div></div><div></div><div></div><div></div>
+        </div>
+        <div id="pdfPreview" class="pdf-preview" style="display:none;">
+            <h3>Certificate Preview</h3>
+            <canvas id="pdfCanvas"></canvas>
+        </div>
+        <br>
+        <button id="downloadBtn" style="display: none;">Download Certificate</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
